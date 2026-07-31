@@ -3,12 +3,15 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 2.5rem 1rem 4rem;
+  padding: 4rem 1rem 6rem;
+  gap: 5rem;
 }
 
 .hero-section {
   max-width: 800px;
-  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-badge {
@@ -27,47 +30,86 @@
 }
 
 .hero-title {
-  font-size: 2.75rem;
+  font-size: 3rem;
   line-height: 1.2;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .hero-subtitle {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   color: var(--color-text-secondary);
   max-width: 680px;
-  margin: 0 auto;
+  margin: 0 auto 2.5rem auto;
   line-height: 1.6;
 }
 
-.upload-section {
-  width: 100%;
-  margin-bottom: 4rem;
+.get-started-btn {
+  font-size: 1.1rem;
+  padding: 0.85rem 2.5rem;
+  border-radius: 30px;
 }
 
-.features-grid {
+.about-section {
+  max-width: 900px;
+  width: 100%;
+  padding: 3rem;
+  text-align: left;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-icon {
+  font-size: 2rem;
+  color: var(--color-accent);
+}
+
+.about-section h2 {
+  font-size: 2rem;
+}
+
+.about-section p {
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.services-section {
+  width: 100%;
+  max-width: 1100px;
+}
+
+.services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
   width: 100%;
-  max-width: 1050px;
-  margin-top: 1rem;
 }
 
-.feature-card {
+.service-card {
   padding: 2rem;
   text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 0.85rem;
+  gap: 1rem;
 }
 
-.feature-icon-box {
-  width: 48px;
-  height: 48px;
+.service-icon-box {
+  width: 54px;
+  height: 54px;
   background: var(--color-accent-glow);
   border: 1px solid rgba(59, 130, 246, 0.3);
   border-radius: var(--radius-sm);
@@ -75,17 +117,22 @@
   align-items: center;
   justify-content: center;
   color: var(--color-accent);
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
-.feature-title {
-  font-size: 1.15rem;
+.service-title {
+  font-size: 1.2rem;
   color: var(--color-text-primary);
   font-weight: 600;
 }
 
-.feature-description {
-  font-size: 0.92rem;
+.service-description {
+  font-size: 0.95rem;
   color: var(--color-text-secondary);
-  line-height: 1.5;
+  line-height: 1.6;
+}
+
+.upload-section {
+  width: 100%;
+  max-width: 800px;
 }
