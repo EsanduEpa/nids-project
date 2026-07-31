@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700&display=swap');
+
+:root {
+  /* Primary Theme Colors */
+  --color-primary: #0a1628;          /* Very dark navy — main background */
+  --color-primary-light: #111d35;    /* Slightly lighter navy — card backgrounds */
+  --color-primary-lighter: #1a2744;  /* Lighter navy — hover states, borders */
+
+  /* Accent Colors */
+  --color-accent: #3b82f6;          /* Bright blue — buttons, links, highlights */
+  --color-accent-hover: #2563eb;    /* Darker blue — button hover */
+  --color-accent-glow: rgba(59, 130, 246, 0.2);  /* Blue glow for cards */
+
+  /* Status Colors */
+  --color-success: #22c55e;         /* Green — normal traffic, safe */
+  --color-success-bg: rgba(34, 197, 94, 0.1);
+  --color-danger: #ef4444;          /* Red — attacks, threats */
+  --color-danger-bg: rgba(239, 68, 68, 0.1);
+  --color-warning: #f59e0b;         /* Amber — warnings, percentages */
+  --color-warning-bg: rgba(245, 158, 11, 0.1);
+  --color-info: #06b6d4;            /* Cyan — informational */
+  --color-info-bg: rgba(6, 182, 212, 0.1);
+
+  /* Text Colors */
+  --color-text-primary: #f1f5f9;    /* Almost white — main text */
+  --color-text-secondary: #94a3b8;  /* Light gray — secondary text */
+  --color-text-muted: #64748b;      /* Medium gray — muted text */
+
+  /* Borders and Surfaces */
+  --color-border: #1e293b;          /* Subtle border */
+  --color-border-hover: #334155;
+  --color-card-bg: rgba(17, 29, 53, 0.7); /* Glassmorphism background */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --shadow-glow: 0 0 30px rgba(59, 130, 246, 0.15);
+  --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Outfit', 'Inter', system-ui, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-main);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(6, 182, 212, 0.06) 0%, transparent 40%);
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text-primary);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+/* Glassmorphism Card Utility */
+.glass-card {
+  background: var(--color-card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+}
+
+.glass-card:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-lighter);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--color-accent);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.35);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+}
+
+.btn-secondary {
+  background-color: var(--color-primary-lighter);
+  color: var(--color-text-primary);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transition);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary-light);
+  border-color: var(--color-accent);
+}
