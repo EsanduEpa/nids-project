@@ -1,0 +1,45 @@
+.results-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0 3rem;
+}
+
+.results-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.results-title-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.results-title {
+  font-size: 2rem;
+  color: var(--color-text-primary);
+}
+
+.results-subtitle {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+}
+
+.empty-state-card {
+  margin: 4rem auto;
+  max-width: 520px;
+  padding: 3rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.empty-state-icon {
+  font-size: 3rem;
+  color: var(--color-accent);
+}
