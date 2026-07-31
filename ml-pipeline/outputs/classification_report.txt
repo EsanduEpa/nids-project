@@ -1,0 +1,11 @@
+Full Classification Report for Best Model: XGBoost
+============================================================
+
+              precision    recall  f1-score   support
+
+      Normal       0.77      0.98      0.86     56000
+      Attack       0.99      0.86      0.92    119341
+
+    accuracy                           0.90    175341
+   macro avg       0.88      0.92      0.89    175341
+weighted avg       0.92      0.90      0.90    175341
